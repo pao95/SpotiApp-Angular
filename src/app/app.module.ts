@@ -12,6 +12,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
 // ruta
 import { appRouting } from './app.routes';
+import { NoImagesPipe } from './pipes/no-images.pipe';
 
 // servicios
 
@@ -21,7 +22,8 @@ import { appRouting } from './app.routes';
     HomeComponent,
     SearchComponent,
     ArtistaComponent,
-    NavbarComponent
+    NavbarComponent,
+    NoImagesPipe
   ],
   imports: [
     BrowserModule,
