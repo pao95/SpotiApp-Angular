@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,7 +18,7 @@ export class SpotifyService {
 
     const headers = new HttpHeaders({
       // tslint:disable-next-line:object-literal-key-quotes
-          'Authorization': 'Bearer BQDLehGgjLxWR69C1rCcYm45PMqFpXt5-oG_TOq-9zMX7WCOUAQDfBh72CTahnW4WNbfA59ovBxoAd4pbYI'
+          'Authorization': 'Bearer BQCHTiCykITwa_nuys6O6DmUY7qHcbmFmVDofI83OxcCpCIma2nurKlEm2noIdaSD6nrSo0ycXRUAi6cdTM'
         });
 
     return this.http.get(url, {headers});
@@ -31,11 +32,22 @@ return this.getQuery('/browse/new-releases')
 ));
   }
 
-  getArtist(termino: string) {
+  getArtists(termino: string) {
 
   return this.getQuery(`/search?q=${termino}&type=artist`)
   .pipe(map (data =>  data['artists'].items
   ));
 
 }
+
+getArtist(id: string) {
+  console.log('hola soy el id' +  id);
+
+  console.log('hola a ver si adno' + this.getQuery(`/artists/${id}`)
+  .pipe(map (data => data)));
+
+  return this.getQuery(`/artists/${id}`)
+    .pipe(map (data => data));
+
+  }
 }

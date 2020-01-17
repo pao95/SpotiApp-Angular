@@ -1,11 +1,3 @@
-<div class="card-columns">
-    <div class="card text-white bg-secondary mb-3" *ngFor="let item of nuevasCanciones, let i = index">
-      <img [src]="item.images[0].url" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{item.name}}</h5>
-        <p class="card-text">
-            <span *ngFor="let artista of item.artists" class="badge badge-success">{{item.artists[0].name}}</span>
-        </p>
-      </div>
-    </div>
-</div>
+<app-refresh *ngIf="loading"></app-refresh>
+
+<app-tarjeta-componente class="m-5" [items] = "nuevasCanciones"></app-tarjeta-componente>

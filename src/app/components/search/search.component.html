@@ -1,22 +1,10 @@
 
-
-
-
-
 <div >
     <div>
         <input #termino type="text" class="form-control" (keyup.enter)="buscarArtista(termino.value)" placeholder="Buscar artista" style="text-transform:uppercase">
     </div>
 </div>
 
-<div class="card-columns m-5">
-    <div class="card" *ngFor="let item of artistas">
+<app-refresh class="m-5" *ngIf="loading" ></app-refresh>
 
-        <!-- <img *ngIf="item.images == 0" src="assets/img/banner-ico.png" class="card-img-top" alt=""> -->
-        <img [src]="item.images|noImages" class="card-img-top" alt="">
-        <div class="card-body">
-            <h5 class="card-title">{{item.name}}</h5>
-            <span *ngFor="let genres of item.genres, let i = index" class="badge badge-success">{{genres}}</span>
-        </div>
-    </div>
-</div>
+<app-tarjeta-componente *ngIf="!loading" [items] = "artistas" class="m-5"></app-tarjeta-componente>
