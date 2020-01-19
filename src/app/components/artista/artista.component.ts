@@ -17,6 +17,7 @@ export class ArtistaComponent implements OnInit {
     private spotifyService: SpotifyService
   ) {
     this.activatedRoute.params.subscribe(params => {
+      console.log(params)
       this.getArtista(params["id"]);
       this.getTopTracks(params['id']);
     });

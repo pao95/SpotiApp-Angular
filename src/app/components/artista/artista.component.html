@@ -44,7 +44,10 @@
                         <p>{{item.name}}</p>
                     </td>
                     <td>
-                        <iframe [src]="cancion | domSeguro:'?uri=spotify:artist:3vIFTM70CYTYr122vTVpzx'" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        <iframe [src]=" item.album.id  | domseguro : 'https://open.spotify.com/embed/album/'" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+
+
 
                     </td>
                 </tr>
