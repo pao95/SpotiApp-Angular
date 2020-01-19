@@ -9,6 +9,7 @@ const routes: Routes = [
     { path: 'search', component: SearchComponent },
     {path: 'artista/:id', component: ArtistaComponent},
     {path: 'playlists', component: HomePlaylistComponent},
+    {path: 'playlists/:id', component: HomePlaylistComponent},
     { path: '**', pathMatch: 'full', redirectTo: 'home' },
     { path: '', pathMatch: 'full', redirectTo: 'home' }
 ];

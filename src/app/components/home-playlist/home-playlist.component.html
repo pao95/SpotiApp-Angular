@@ -1,5 +1,18 @@
-<div *ngFor="let item of playlist">
-    <h1>{{item.name}}</h1>
-</div>
+<h1>Playslist's</h1>
+<div class="m-5">
 
-<a href="https://accounts.spotify.com/authorize?client_id=2ad1cdafdb0846079d2ce00f9479bcf0&response_type=token&redirect_uri=http://localhost:4200/playlists/">gfghgfhg</a>
+
+
+    <div class="row row-cols-1 row-cols-md-3">
+        <div class="col mb-4" *ngFor="let item of playlist">
+            <div class="card">
+                <img [src]="item.images[0].url" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.name}}</h5>
+                    <a [routerLink]="['playlist', item.id]" class="btn btn-success">Escuchar</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
