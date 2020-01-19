@@ -13,8 +13,10 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 // ruta
 import { appRouting } from './app.routes';
 import { NoImagesPipe } from './pipes/no-images.pipe';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 import { TarjetaComponenteComponent } from './components/tarjeta-componente/tarjeta-componente.component';
 import { RefreshComponent } from './components/shared/refresh/refresh.component';
+
 
 // servicios
 
@@ -25,6 +27,7 @@ import { RefreshComponent } from './components/shared/refresh/refresh.component'
     SearchComponent,
     ArtistaComponent,
     NavbarComponent,
+    DomseguroPipe,
     NoImagesPipe,
     TarjetaComponenteComponent,
     RefreshComponent

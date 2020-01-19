@@ -20,13 +20,15 @@ export class TarjetaComponenteComponent implements OnInit {
 
   verArtista(item: any ) {
 
-let idArtist: any;
+let idArtist;
 
 if (item.type === 'album') {
         idArtist = item.artists[0].id;
     } else {
       idArtist = item.id;
     }
+
+
 this.router.navigate(['/artista', idArtist ]);
   }
 
