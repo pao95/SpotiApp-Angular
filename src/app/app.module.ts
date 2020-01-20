@@ -16,8 +16,7 @@ import { NoImagesPipe } from './pipes/no-images.pipe';
 
 import { TarjetaComponenteComponent } from './components/tarjeta-componente/tarjeta-componente.component';
 import { RefreshComponent } from './components/shared/refresh/refresh.component';
-import { HomePlaylistComponent } from './components/home-playlist/home-playlist.component';
-import { PlaylistComponent } from './components/playlist/playlist.component';
+
 
 
 // servicios
@@ -33,8 +32,7 @@ import { PlaylistComponent } from './components/playlist/playlist.component';
     NoImagesPipe,
     TarjetaComponenteComponent,
     RefreshComponent,
-    HomePlaylistComponent,
-    PlaylistComponent
+
   ],
   imports: [
     BrowserModule,

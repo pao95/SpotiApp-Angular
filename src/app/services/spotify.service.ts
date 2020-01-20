@@ -18,7 +18,7 @@ export class SpotifyService {
 
     const headers = new HttpHeaders({
       // tslint:disable-next-line:object-literal-key-quotes
-          'Authorization': 'Bearer BQBAUMxXQzDBKBzo6HDcroKjpJ1BfpMyFudcBlSqMvzAECGHtvAo1iyg5Yt-Fxl6k2bUKcf2tt9wLOe6Af7lAds-d3M4YcFLKJkXbzfOZiDa1rvJ1FJDQgARZvknSLU5_iagUbN5JX_mChgghyYH7xQvJbC-ZoOFspaRoieFWaOJqUJQeg-lczDCnV4fnXIn1mdMWyE',
+          'Authorization': 'Bearer BQDmQgCHV-LPcvNaJVHcJkQu5cFNIPkVGmFJcz8l0_FXFgYm-NEsL85uaXSLHowd9IUt2CMhi9DdPNygcismYq-UJ_QTe3x9g0tfamjnFPJtJZTM0O2d5svrM3mPNaO7MgJYVudE52e7keLeJHxCwV7IJXuYloIm9Ed25NtsLjlJKkXqd4CZ6E5uEOD2Gf5ao_Rqk0n3suCyVt-hnH709-y-PvoN6JmtfWx7',
           
         });
 
@@ -61,6 +61,7 @@ getPlaylists(){
 
 getTracksPlaylist(id: string){
 return this.getQuery(`/playlists/${id}/tracks`)
+.pipe(map (data => data['items']));
 
 }
 }
